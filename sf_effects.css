@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 4
+   Case Problem 2
+   
+   Save your Fork Graphic Design Styles
+   Author: Evelyn Duarte
+   Date: 11/13/18
+
+   Filename: sf_effects.css
+
+*/
+
+/* Body Header Styles */
+/* the body has a shadow with an offset of 10px and a blur of 50px. */
+body {
+    box-shadow: rgb(51, 51, 51) 10px 0px 50px;
+}
+
+
+/* Navigation Tabs List Styles */
+/* the class of tab in the nav is nested in the header that is a child of body has no tiling, centered horizontally and veritcally and covers the entire background. */
+body>header nav.tabs {
+    background: url(sf_back1.png) center center no-repeat;
+    background-size: cover;
+}
+
+/* the list nested inside the class tabs nested within a header that is a child of the body must have a shape of a trapezoid, in oder to do so, you must transform it with a persepctive of 50px, and rotate it against the x-axis with 20 degrees. */
+body>header nav.tabs li {
+    transform: perspective(50px) rotateX(20deg);
+}
+
+/* When hovering over the navigation with a specified class of tab, the tab has a color of rgb value. */
+body>header nav.tabs li:hover {
+    background-color: rgb(231, 231, 231);
+}
+
+/* Left Section Styles */
+/* The class of vertical in the nav as well as the ID of left inside of the section has a border of 1px that is solid and has an rgb color, the corners have a radius of 25px. */
+section#left nav.vertical {
+    border: 1px solid rgb(20, 167, 170);
+    border-radius: 25px;
+}
+
+/* The h1 inside the section left has the top-right and top-left corner with a radius of 24px to fit the border outline. */
+section#left h1 {
+    border-radius: 24px 24px 0px 0px;
+}
+
+/* Center Article Styles */
+/* the article nested in the section with ID of center has a background radial gradient color of white with a color-stop at 30% transitioning to rgb value. The border has a solid 1px line with a rgb color value. The corners have a 50px radius and the box shadow has a horizontal and vertical offset of 10px and blur of 20px with it's color value. */
+section#center article {
+    background: radial-gradient(white 30%, rgb(151, 151, 151));
+    border: 1px solid rgb(151, 151, 151);
+    border-radius: 50px;
+    box-shadow: 10px 10px 20px rgb(51, 51, 51);
+
+}
+
+/* Blockquote Styles */
+/* The blockquote has a background image that is linked and has no tiling. The size is set to cover the entire thing and it also has a drop shadow which is inputed with a filter, a 5px offset and 10px blur with rgb color. */
+blockquote {
+    background: url(sf_speech.png) no-repeat;
+    background-size: 100% 100%;
+    filter: drop-shadow(5px 5px 10px rgb(51, 51, 51));
+
+}
+
+/* the image nested within the cite element has a radius of 50%. */
+cite img {
+    border-radius: 50%;
+}
